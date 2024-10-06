@@ -29,7 +29,7 @@ func checkCreditNumber(w http.ResponseWriter, r *http.Request) {
 		val := int(cNum) - 48
 		cNumber = append(cNumber, val)
 	}
-	fmt.Println(cNumber)
+	
 	isValid := Luhn(cNumber)
 
 	//returns whether the given number is valid or not
